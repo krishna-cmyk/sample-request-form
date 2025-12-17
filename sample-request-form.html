@@ -1106,8 +1106,11 @@
                 }
             });
             
+            // Calculate total samples properly
+            const totalSamples = naturalStoneCount + saCommercialCount + porceaCount;
+            
             formData.sampleDetails = sampleDetailsText;
-            formData.totalSamples = checkedBoxes.length;
+            formData.totalSamples = totalSamples;
             formData.totalWeight = totalWeight.toFixed(1);
             formData.naturalStoneCount = naturalStoneCount;
             formData.saCommercialCount = saCommercialCount;
